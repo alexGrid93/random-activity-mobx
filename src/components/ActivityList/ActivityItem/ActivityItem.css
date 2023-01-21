@@ -1,4 +1,13 @@
 .item_container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.item_text {
+  font-size: 20px;
+}
+
+.item_text--done {
+  text-decoration: line-through
 }

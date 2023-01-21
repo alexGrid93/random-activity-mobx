@@ -1,4 +1,4 @@
-.container {
+.search_container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -10,14 +10,14 @@
   
 }
 
-.qoute {
+.search_text {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10em;
+  font-size: 36px;
 }
 
-.button-container {
+.search_button-container {
   display: flex;
   justify-content: space-evenly;
 }
