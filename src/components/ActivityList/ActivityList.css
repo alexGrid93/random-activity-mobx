@@ -1,0 +1,5 @@
+.list-container {
+  border: 1px solid red;
+  min-width: 50vw;
+  padding: 2rem
+}
