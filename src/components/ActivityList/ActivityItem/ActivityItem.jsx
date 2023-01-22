@@ -1,5 +1,5 @@
 import "./ActivityItem.css"
-import { activityStore } from "../../../core/ActivityStore" 
+import { activityStore } from "../../../ActivityStore" 
 import { observer } from "mobx-react"
 
 

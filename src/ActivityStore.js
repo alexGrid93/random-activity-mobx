@@ -1,4 +1,6 @@
 import { makeAutoObservable, runInAction } from "mobx";
+import { getActivity } from "./api/getActivity";
+import { getInitialActivities } from "./api/getInitialActivities";
 
 class ActivityStore {
   constructor() {
@@ -7,40 +9,39 @@ class ActivityStore {
 
   currentRandomActivity = null;
 
-  getRandomActivity = () => {
-    fetch("https://www.boredapi.com/api/activity")
-      .then((data) => data.json())
-      .then((activity) =>
-        runInAction(() => {
-          this.currentRandomActivity = activity;
-        })
-      );
+  setRandomActivity = () => {
+    getActivity().then((activity) =>
+      runInAction(() => {
+        this.currentRandomActivity = activity;
+      })
+    );
   };
 
   activitiesInList = [];
 
-  getInitialActivitiesInList = () => {
-    const requests = [];
+  get activitiesCount() {
+    return this.activitiesInList.length;
+  }
 
-    for (let i = 0; i < 4; i++) {
-      requests.push(fetch("https://www.boredapi.com/api/activity"));
-    }
+  get activitiesCountDone() {
+    return this.activitiesInList.reduce((acc, current) => {
+      if (current.isDone) acc++;
+      return acc;
+    }, 0);
+  }
 
-    Promise.all(requests)
-      .then((responses) =>
-        Promise.all(responses.map((response) => response.json()))
-      )
-      .then((data) =>
-        runInAction(() => {
-          data.forEach((activityItem) => {
-            this.activitiesInList.push({
-              text: activityItem.activity,
-              id: activityItem.key,
-              isDone: false,
-            });
+  setInitialActivitiesInList = () => {
+    getInitialActivities().then((data) =>
+      runInAction(() => {
+        data.forEach((activityItem) => {
+          this.activitiesInList.push({
+            text: activityItem.activity,
+            id: activityItem.key,
+            isDone: false,
           });
-        })
-      );
+        });
+      })
+    );
   };
 
   addCurrentRandomActivity = () => {

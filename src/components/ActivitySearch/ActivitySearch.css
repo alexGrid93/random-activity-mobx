@@ -4,20 +4,24 @@
   justify-content: space-around;
   width: 50vw;
   height: 30vh;
-  border: 1px solid black;
+  border: solid black;
+  border-width: 3px 4px 3px 5px;
+  border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
   padding: 10px;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   
 }
 
 .search_text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   font-size: 36px;
 }
 
 .search_button-container {
   display: flex;
   justify-content: space-evenly;
+}
+
+.search_button {
+  font-size: 20px;
 }

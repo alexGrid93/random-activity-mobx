@@ -1,5 +1,7 @@
-.list-container {
-  border: 1px solid red;
+.list_container {
+  border: solid black;
+  border-width: 3px 4px 3px 5px;
+  border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
   min-width: 50vw;
-  padding: 2rem
+  padding: 2rem 5rem
 }
