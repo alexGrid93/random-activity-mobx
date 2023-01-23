@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/bored-todo/static/css/main.298d4bab.css",
+    "main.js": "/bored-todo/static/js/main.ea31d4cc.js",
+    "index.html": "/bored-todo/index.html",
+    "main.298d4bab.css.map": "/bored-todo/static/css/main.298d4bab.css.map",
+    "main.ea31d4cc.js.map": "/bored-todo/static/js/main.ea31d4cc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.298d4bab.css",
+    "static/js/main.ea31d4cc.js"
+  ]
+}
