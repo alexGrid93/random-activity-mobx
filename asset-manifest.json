@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/bored-todo/static/css/main.298d4bab.css",
-    "main.js": "/bored-todo/static/js/main.ea31d4cc.js",
-    "index.html": "/bored-todo/index.html",
-    "main.298d4bab.css.map": "/bored-todo/static/css/main.298d4bab.css.map",
-    "main.ea31d4cc.js.map": "/bored-todo/static/js/main.ea31d4cc.js.map"
+    "main.css": "/random-activity-mobx/static/css/main.298d4bab.css",
+    "main.js": "/random-activity-mobx/static/js/main.ea31d4cc.js",
+    "index.html": "/random-activity-mobx/index.html",
+    "main.298d4bab.css.map": "/random-activity-mobx/static/css/main.298d4bab.css.map",
+    "main.ea31d4cc.js.map": "/random-activity-mobx/static/js/main.ea31d4cc.js.map"
   },
   "entrypoints": [
     "static/css/main.298d4bab.css",
