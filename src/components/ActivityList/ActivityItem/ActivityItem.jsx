@@ -1,10 +1,9 @@
 import "./ActivityItem.css"
 import { activityStore } from "../../../ActivityStore" 
-import { observer } from "mobx-react"
 
 
 
-export const ActivityItem = observer(({text, id, isDone}) => {
+export const ActivityItem = ({text, id, isDone}) => {
   return (
     <div className="item_container">
     <p className={isDone ? 'item_text item_text--done ': "item_text" }>{text}</p>
@@ -14,4 +13,4 @@ export const ActivityItem = observer(({text, id, isDone}) => {
     </div>
     </div>
   ) 
-})
+}
